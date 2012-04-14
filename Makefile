@@ -13,7 +13,6 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}
 MAINTAINER=	tak.swd@gmail.com
 COMMENT=	A copy of CUnit testing framework with further additions
 
-DOCSDIR=	${PREFIX}/share/doc/CUnit
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoheader
@@ -32,8 +31,6 @@ OPTIONS=	DEB "Enable debug interface" Off \
 #		DEP "Enable use of deprecated v1.1 names" Off
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/doc/@PACKAGE@|/share/doc/@PACKAGE@|g' ${WRKSRC}/doc/Makefile.in
-	@${REINPLACE_CMD} -e 's|/doc/@PACKAGE@|/share/doc/@PACKAGE@|g' ${WRKSRC}/doc/headers/Makefile.in
 	@${REINPLACE_CMD} -e 's|/@PACKAGE@/Examples/Automated|/examples/@PACKAGE@/Automated|g' ${WRKSRC}/Examples/AutomatedTest/Makefile.in
 	@${REINPLACE_CMD} -e 's|/@PACKAGE@/Examples/Basic|/examples/@PACKAGE@/Basic|g' ${WRKSRC}/Examples/BasicTest/Makefile.in
 	@${REINPLACE_CMD} -e 's|/@PACKAGE@/Examples/Console|/examples/@PACKAGE@/Console|g' ${WRKSRC}/Examples/ConsoleTest/Makefile.in
