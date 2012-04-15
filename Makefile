@@ -8,12 +8,11 @@ PORTNAME=	c-unit
 DISTVERSION=	1.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
-DISTNAME=	${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	tak.swd@gmail.com
 COMMENT=	A copy of CUnit testing framework with further additions
 
-CONFLICTS=	cunit-*
+CONFLICTS=	cunit-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
