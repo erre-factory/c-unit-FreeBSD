@@ -13,6 +13,8 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}
 MAINTAINER=	tak.swd@gmail.com
 COMMENT=	A copy of CUnit testing framework with further additions
 
+CONFLICTS=	cunit-*
+
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoheader
