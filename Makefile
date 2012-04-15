@@ -35,9 +35,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/@PACKAGE@/Examples/Basic|/examples/@PACKAGE@/Basic|g' ${WRKSRC}/Examples/BasicTest/Makefile.in
 	@${REINPLACE_CMD} -e 's|/@PACKAGE@/Examples/Console|/examples/@PACKAGE@/Console|g' ${WRKSRC}/Examples/ConsoleTest/Makefile.in
 	@${REINPLACE_CMD} -e 's|/@PACKAGE@/Examples/Curses|/examples/@PACKAGE@/Curses|g' ${WRKSRC}/Examples/CursesTest/Makefile.in
-.if defined(NOPORTDOCS)
-	${REINPLACE_CMD} -e 's|CUnit doc Man Share|CUnit Man Share|g' ${WRKSRC}/Makefile.in
-.endif
 
 .include <bsd.port.pre.mk>
 
